@@ -1195,7 +1195,7 @@
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(1S, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 28px;
   max-width: 900px;
   margin: 0 auto;
