@@ -123,7 +123,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: var(--navy);
+    background: var(--purple);
     box-shadow: 0 2px 16px rgba(0,0,0,0.25);
     transition: var(--transition);
   }
@@ -219,7 +219,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: var(--navy);
+    background: var(--purple);
     z-index: 999;
     flex-direction: column;
     align-items: center;
@@ -262,8 +262,7 @@
 
   /* ── HERO ── */
   #hero {
-    background: linear-gradient(135deg, var(--navy) 0%, #1a3a6b 50%, #0d2241 100%);
-    position: relative;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 50%, var(--purple) 100%);    position: relative;
     overflow: hidden;
     padding: 80px 0 60px;
     min-height: 88vh;
@@ -776,8 +775,7 @@
 
   /* ── WHY INDEPENDENT ── */
   #independent {
-    background: linear-gradient(150deg, var(--navy) 0%, #0f2d58 60%, #1a3a6b 100%);
-    padding: 100px 0;
+    background: linear-gradient(150deg, var(--purple) 0%, #5a2390 60%, var(--purple-light) 100%);    padding: 100px 0;
     position: relative;
     overflow: hidden;
   }
@@ -1398,7 +1396,7 @@
 
   /* ── FOOTER ── */
   #footer {
-    background: var(--navy);
+    background: var(--purple);
     color: var(--white);
     padding: 64px 0 0;
   }
