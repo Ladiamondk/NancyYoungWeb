@@ -1347,7 +1347,7 @@
 }
 
   /*  –– ENDORSEMENT FORM –– */
-  .endorsement-margin { margin: 80px 0;
+  .endorsement-margin { margin: 50px 0;
 
   }
   /* ── ENDORSEMENTS SHOWCASE ── */
@@ -1583,7 +1583,7 @@
     padding: 20px; /* Gives the form some breathing room on small screens */
   }
 
-  .endorsement-margin {
-    padding-top: 80px; /* Prevents the fixed navbar from overlapping content */
+  .endorsement-padding {
+    padding-top: 10px; /* Prevents the fixed navbar from overlapping content */
   }
 }
