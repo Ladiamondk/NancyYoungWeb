@@ -1358,10 +1358,10 @@
 }
 
 .endorsements-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 40px;
+   display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 72px;
+    align-items: start;
 }
 
 .endorsement-card {
@@ -1530,6 +1530,7 @@
     .form-row { grid-template-columns: 1fr; }
     .checkboxes { grid-template-columns: 1fr; }
     .credentials-list { grid-template-columns: 1fr; }
+    .endorsements-grid {grid-template-columns: repeat(2, 1fr);}
   }
 
   @media (max-width: 640px) {
@@ -1543,18 +1544,9 @@
     .campaign-form { padding: 24px 20px; }
     .hero-badge-line1 { font-size: 0.52rem; }
     .hero-badge-line2 { font-size: 0.7rem; }
+    .endorsements-grid { grid-template-columns: 1fr;}
   }
-  @media (max-width: 860px) {
-  .endorsements-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
- }
 
-@media (max-width: 640px) {
-  .endorsements-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
   /* Scroll reveal */
   .reveal {
@@ -1567,3 +1559,31 @@
     opacity: 1;
     transform: none;
   }
+/* Responsive adjustments for the Endorsement section */
+@media (max-width: 768px) {
+  .involved-inner {
+    display: flex;
+    flex-direction: column; /* Stacks the text on top of the form */
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .involved-left, .involved-right {
+    width: 100% !important; /* Ensures both sides take full width */
+    text-align: center;    /* Optional: centers text for a cleaner mobile look */
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column; /* Stacks First/Last name fields vertically */
+    gap: 0;
+  }
+
+  .campaign-form {
+    padding: 20px; /* Gives the form some breathing room on small screens */
+  }
+
+  .endorsement-margin {
+    padding-top: 80px; /* Prevents the fixed navbar from overlapping content */
+  }
+}
