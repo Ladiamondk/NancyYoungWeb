@@ -10,10 +10,12 @@
     --text-dark: #1a1a2e;
     --text-body: #3a3a4a;
     --text-muted: #6a6a7a;
-    --purple: #551a8b;
-    --purple-light: #6b2fa0;
+    --purple: #2A0450;
+    --purple-light: #7C3ABD;
+    --gold2: #C9A84C;
+    --gold-bright: #e8c96a;
     --gold: #ecc240;
-    --gold-dark: #d4a820;
+    --gold-dark: #A8842A;
     --shadow-sm: 0 2px 8px rgba(13,34,65,0.08);
     --shadow-md: 0 6px 24px rgba(13,34,65,0.12);
     --shadow-lg: 0 16px 48px rgba(13,34,65,0.16);
@@ -63,25 +65,25 @@
   }
 
   .btn-primary {
-    background: var(--red);
+    background: var(--gold-dark);
     color: var(--white);
-    border-color: var(--red);
+    border-color: var(--gold-dark);
   }
   .btn-primary:hover {
-    background: var(--red-dark);
-    border-color: var(--red-dark);
+    background: var(--gold2);
+    border-color: var(--gold2);
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(200,16,46,0.35);
+    box-shadow: 0 6px 20px rgba(201,168,76,0.3);
   }
 
   .btn-navy {
-    background: var(--navy);
+    background: var(--purple);
     color: var(--white);
-    border-color: var(--navy);
+    border-color: var(--purple);
   }
   .btn-navy:hover {
-    background: var(--navy-light);
-    border-color: var(--navy-light);
+    background: var(--purple-light);
+    border-color: var(--purple-light);
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
   }
@@ -98,18 +100,18 @@
 
   .btn-outline-navy {
     background: transparent;
-    color: var(--navy);
-    border-color: var(--navy);
+    color: var(--purple);
+    border-color: var(--purple);
   }
   .btn-outline-navy:hover {
-    background: var(--navy);
+    background: var(--purple);
     color: var(--white);
   }
 
   .btn-gold {
-    background: var(--gold);
-    color: var(--navy);
-    border-color: var(--gold);
+    background: var(--gold-dark);
+    color: var(--purple);
+    border-color: var(--gold-dark);
   }
   .btn-gold:hover {
     background: var(--gold-dark);
@@ -514,7 +516,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    background: linear-gradient(135deg, var(--purple), var(--purple-light));
     border-radius: 50%;
     color: var(--gold);
     font-size: 1.4rem;
@@ -801,9 +803,9 @@
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--gold-dark);
     margin-bottom: 16px;
-    border-bottom: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold-dark);
     padding-bottom: 4px;
   }
 
@@ -1219,8 +1221,8 @@
 
 .news-badge {
   display: inline-block;
-  background: rgba(200,16,46,0.1);
-  color: var(--red);
+  background: rgba(82, 3, 147, 0.1);
+  color: var(--purple);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -1393,6 +1395,58 @@
   filter: grayscale(0%);
   opacity: 1;
 }
+/* ── NEWS PAGE ── */
+#news-page {
+  background: var(--white);
+  padding: 96px 0;
+}
+
+.news-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.news-page-card {
+  background: var(--white);
+  border: 1px solid var(--mid-gray);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.news-page-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--gold);
+}
+
+.news-page-meta {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.news-page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.news-page-excerpt {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: auto;
+  padding-bottom: 20px;
+}
 
   /* ── FOOTER ── */
   #footer {
@@ -1507,6 +1561,7 @@
     .credibility-grid { grid-template-columns: repeat(2, 1fr); }
     .priorities-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    .news-page-grid { grid-template-columns: repeat(2, 1fr);}
   }
 
   @media (max-width: 860px) {
@@ -1545,6 +1600,7 @@
     .hero-badge-line1 { font-size: 0.52rem; }
     .hero-badge-line2 { font-size: 0.7rem; }
     .endorsements-grid { grid-template-columns: 1fr;}
+    .news-page-grid { grid-template-columns: 1fr;}
   }
 
 
