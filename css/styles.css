@@ -1661,6 +1661,7 @@
     font-size: 0.7rem;
     width: 34px;
     height: 34px;
+    justify-content: center;
   }
   .video-audio-ctrl span {
     font-size: 0; 
