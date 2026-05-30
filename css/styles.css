@@ -1615,7 +1615,9 @@
     opacity: 1;
     transform: none;
   }
+
 /* Responsive adjustments for the Endorsement section */
+
 @media (max-width: 768px) {
   .involved-inner {
     display: flex;
@@ -1652,11 +1654,13 @@
   .video-wrapper {
     border-radius: 4px;
   }
-    .video-audio-ctrl {
+  .video-audio-ctrl {
     bottom: 10px;
     right: 10px;
     padding: 6px 10px;
     font-size: 0.7rem;
+    width: 34px;
+    height: 34px;
   }
 }
 
